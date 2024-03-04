@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abertura de Ordem de Serviço - Delta Telecom TI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="https://iconape.com/wp-content/png_logo_vector/delta-telecom-logo.png" alt="Delta Telecom Logo" class="logo">
+    <h1>Atendimento Técnico Delta Telecom TI</h1>
+  </header>
+  <main>
+    <form id="orderForm">
+      <div class="form-group">
+        <label for="docType">Tipo de Documento:</label>
+        <select id="docType" name="docType">
+          <option value="cpf">CPF</option>
+          <option value="cnpj">CNPJ</option>
+        </select>
+        <input type="text" id="docNumber" name="docNumber" placeholder="Digite o CPF ou CNPJ" required>
+      </div>
+      <div class="form-group">
+        <label for="clientName">Nome do Cliente:</label>
+        <input type="text" id="clientName" name="clientName" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Endereço:</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefone de Contato com Whatsapp:</label>
+        <input type="text" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="issue">Problema Reclamado:</label>
+        <input type="text" id="issue" name="issue" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Descrição do Problema (até 3000 caracteres):</label><br>
+        <textarea id="description" name="description" rows="4" cols="50" maxlength="3000" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="attachments">Anexar Arquivos (até 5 arquivos de até 50MB cada):</label><br>
+        <input type="file" id="attachments" name="attachments[]" accept=".pdf,.jpg,.png" multiple>
+      </div>
+      <button type="submit" id="submitOrder">Enviar Ordem de Serviço</button>
+    </form>
+  </main>
+  <footer>
+    <p>Desenvolvido por Pedro Portella &copy; <span id="currentYear"></span></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
