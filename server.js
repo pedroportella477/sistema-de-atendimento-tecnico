@@ -4,7 +4,7 @@ const MongoClient = require('mongodb').MongoClient;
 
 const app = express();
 const PORT = 3000;
-const MONGO_URL = 'mongodb://localhost:27017'; // URL de conexão com o MongoDB
+const MONGO_URL = 'mongodb+srv://suportedeltatelecom:<@Delta477>@cluster0.si9kniq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'; // URL de conexão com o MongoDB
 
 // Middleware para analisar corpos de requisição
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -24,7 +24,7 @@ app.post('/submit-order', (req, res) => {
     }
 
     // Selecionando o banco de dados e a coleção
-    const db = client.db('nome-do-seu-banco-de-dados'); // Substitua 'nome-do-seu-banco-de-dados' pelo nome do seu banco de dados
+    const db = client.db('serverdelta'); // Substitua 'nome-do-seu-banco-de-dados' pelo nome do seu banco de dados
     const collection = db.collection('ordens-de-servico');
 
     // Inserindo os dados do formulário na coleção
