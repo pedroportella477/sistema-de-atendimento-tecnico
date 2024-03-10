@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <img src="https://iconape.com/wp-content/png_logo_vector/delta-telecom-logo.png" alt="Delta Telecom Logo" class="logo">
+    <img src="https://iconape.com/wp-content/png_logo_vector/delta-telecom-logo.png" alt="Logo da Delta Telecom" class="logo">
     <h1>Atendimento Técnico Delta Telecom TI</h1>
   </header>
   <main>
@@ -31,7 +31,8 @@
       </div>
       <div class="form-group">
         <label for="phone">Telefone de Contato com Whatsapp:</label>
-        <input type="text" id="phone" name="phone" required>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" required>
+        <small>Formato: 12-3456-7890</small>
       </div>
       <div class="form-group">
         <label for="email">E-mail:</label>
@@ -53,7 +54,7 @@
     </form>
   </main>
   <footer>
-    <p>Desenvolvido por Pedro Portella &copy; <span id="currentYear"></span></p>
+    <p>Desenvolvido por Pedro Portella © <span id="currentYear"></span></p>
   </footer>
   <script src="script.js"></script>
 </body>
