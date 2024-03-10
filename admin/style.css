@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #336699;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header img.logo {
+  max-width: 100px;
+}
+
+main {
+  padding: 20px;
+  max-width: 600px; /* Definindo uma largura máxima para o conteúdo */
+  margin: 0 auto; /* Centralizando o conteúdo */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  color: #336699;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: calc(100% - 22px); /* Ajustando a largura dos campos */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Garantindo que o padding não altere a largura total */
+  margin-bottom: 10px; /* Adicionando espaçamento inferior */
+}
+
+button {
+  background-color: #336699;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Fazendo o botão ocupar toda a largura disponível */
+}
+
+button:hover {
+  background-color: #255580;
+}
+
+footer {
+  background-color: #336699;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Painel de Administração</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Painel de Administração</h1>
+  </header>
+  <main>
+    <div class="form-group">
+      <label for="search">Pesquisar por CPF/CNPJ ou número da O.S:</label>
+      <input type="text" id="search">
+      <button id="searchButton">Pesquisar</button>
+    </div>
+    <h2>Relatórios de O.S</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Número da O.S</th>
+          <th>CPF/CNPJ</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Os dados dos pedidos serão inseridos aqui -->
+      </tbody>
+    </table>
+  </main>
+  <footer>
+    <p>Desenvolvido por Pedro Portella &copy; <span id="currentYear"></span></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
