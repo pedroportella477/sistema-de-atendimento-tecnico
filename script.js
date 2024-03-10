@@ -14,7 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
     var issue = document.getElementById("issue").value;
     var description = document.getElementById("description").value;
 
-    // Validando os campos (coloque aqui sua lógica de validação)
+    // Validando os campos
+    if (!docType || !docNumber || !clientName || !address || !phone || !email || !issue || !description) {
+      alert('Por favor, preencha todos os campos.');
+      return;
+    }
 
     // Criando o objeto com os dados do formulário
     var formData = {
@@ -28,9 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
       description: description
     };
 
-    // Enviando os dados para o MongoDB (coloque aqui sua lógica para enviar os dados para o MongoDB)
-    // Por exemplo, você pode usar fetch() para fazer uma requisição POST para um endpoint da sua API
-
+    // Enviando os dados para o MongoDB
     fetch('/api/ordem-servico', {
       method: 'POST',
       headers: {
@@ -39,10 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
       body: JSON.stringify(formData)
     })
     .then(response => {
-      if (response.ok) {
-        return response.json();
+      if (!response.ok) {
+        throw new Error('Erro ao enviar ordem de serviço');
       }
-      throw new Error('Erro ao enviar ordem de serviço');
+      return response.json();
     })
     .then(data => {
       // Lógica para manipular a resposta do servidor, se necessário
